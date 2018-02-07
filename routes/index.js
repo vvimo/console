@@ -25,4 +25,8 @@ app.post('/article/delete', function (req, res, next) { ApiDao.articleDao.delete
 app.post('/article/queryById', function (req, res, next) { ApiDao.articleDao.queryById(req, res, next) })
 app.post('/article/queryAll', function (req, res, next) { ApiDao.articleDao.queryAll(req, res, next) })
 
+/* card */
+app.post('/card/add', function (req, res, next) { ApiDao.cardDao.add(req, res, next) })
+app.post('/card/info', function (req, res, next) { ApiDao.cardDao.queryByCard(req, res, next) })
+
 module.exports = app;
