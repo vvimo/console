@@ -2,7 +2,6 @@ var express = require('express');
 var app = express.Router();
 var ApiDao = require('../api/dao');
 
-
 /* login */
 app.post('/login/add', function (req, res, next) { ApiDao.loginDao.add(req, res, next) })
 app.post('/login/update', function (req, res, next) { ApiDao.loginDao.update(req, res, next) })
@@ -28,5 +27,8 @@ app.post('/article/queryAll', function (req, res, next) { ApiDao.articleDao.quer
 /* card */
 app.post('/card/add', function (req, res, next) { ApiDao.cardDao.add(req, res, next) })
 app.post('/card/info', function (req, res, next) { ApiDao.cardDao.queryByCard(req, res, next) })
+
+/* qiniu */
+app.post('/qiniu/upload', function (req, res, next) { ApiDao.qiniuDao.upload(req, res, next) })
 
 module.exports = app;
