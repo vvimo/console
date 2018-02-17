@@ -30,5 +30,6 @@ app.post('/card/info', function (req, res, next) { ApiDao.cardDao.queryByCard(re
 
 /* qiniu */
 app.post('/qiniu/upload', function (req, res, next) { ApiDao.qiniuDao.upload(req, res, next) })
+app.post('/qiniu/getToken', function (req, res, next) { ApiDao.qiniuDao.getToken(req, res, next) })
 
 module.exports = app;

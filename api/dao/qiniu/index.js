@@ -39,5 +39,8 @@ module.exports = {
         console.log(respBody)
       }
     })
+  },
+  getToken: function () {
+    return putPolicy.uploadToken(mac)
   }
 }
